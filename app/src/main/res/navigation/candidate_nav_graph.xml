@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/candidate_nav_graph"
+    app:startDestination="@id/nav_profile">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.authentif.ui.CandidateProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.authentif.PlaceholderFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/nav_jobs"
+        android:name="com.example.authentif.ui.CandidateJobsFragment"
+        android:label="Jobs" />
+
+    <fragment
+        android:id="@+id/nav_applications"
+        android:name="com.example.authentif.ui.MyApplicationsFragment"
+        android:label="My Applications" />
+
+
+
+</navigation>

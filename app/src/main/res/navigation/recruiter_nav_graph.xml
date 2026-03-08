@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recruiter_nav_graph"
+    app:startDestination="@id/nav_recruiter_jobs">
+
+    <!-- ✅ HOME = Activity -->
+    <activity
+        android:id="@+id/nav_recruiter_home"
+        android:name="com.example.authentif.ui.DashboardActivityRecruteur"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/nav_recruiter_jobs"
+        android:name="com.example.authentif.ui.RecruiterJobsFragment"
+        android:label="Jobs" />
+
+    <fragment
+        android:id="@+id/nav_recruiter_candidates"
+        android:name="com.example.authentif.ui.RecruiterCandidatesFragment"
+        android:label="Candidates" />
+
+    <fragment
+        android:id="@+id/nav_recruiter_company"
+        android:name="com.example.authentif.ui.RecruiterCompanyFragment"
+        android:label="Company" />
+
+</navigation>

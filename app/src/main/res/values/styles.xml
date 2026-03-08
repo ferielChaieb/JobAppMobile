@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Avatar circulaire -->
+    <style name="CircleImageStyle"
+        parent="@style/ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="colorPrimary">#7C3AED</item>
+        <item name="colorPrimaryVariant">#6D28D9</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+</resources>
+

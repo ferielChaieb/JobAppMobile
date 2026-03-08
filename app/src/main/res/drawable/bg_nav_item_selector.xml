@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Quand l'item est sélectionné -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#EDE7F6"/> <!-- fond violet clair -->
+            <corners android:radius="24dp"/>
+            <padding
+                android:left="8dp"
+                android:top="4dp"
+                android:right="8dp"
+                android:bottom="4dp"/>
+        </shape>
+    </item>
+
+    <!-- Par défaut -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+
+</selector>

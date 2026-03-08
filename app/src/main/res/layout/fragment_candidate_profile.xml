@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB">
+
+    <!-- ✅ SCROLL SUR TOUTE LA PAGE -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollAll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:paddingBottom="110dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="@drawable/bg_profile_header">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvHeaderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/btnSave"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@android:drawable/ic_menu_save"
+                        app:tint="#FFFFFF"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/pro"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircleImageStyle"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Candidate"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="email@example.com"
+                            android:textColor="#DCE6FF"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CONTENT -->
+            <LinearLayout
+                android:id="@+id/contentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:animateLayoutChanges="true">
+
+                <!-- ========================= -->
+                <!-- Professional Info -->
+                <!-- ========================= -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E9EEF8"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Professional Info"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnEditPro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Edit"
+                                android:textColor="#3F7DFF"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+
+                        <!-- VIEW -->
+                        <LinearLayout
+                            android:id="@+id/proView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Current Position"
+                                android:textColor="#8A94A6"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tvPosition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Experience"
+                                android:textColor="#8A94A6"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tvExperienceYears"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Location"
+                                android:textColor="#8A94A6"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tvLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- EDIT -->
+                        <LinearLayout
+                            android:id="@+id/proEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Current Position"
+                                app:boxBackgroundMode="filled"
+                                app:boxBackgroundColor="#FFFFFF"
+                                app:boxStrokeColor="@android:color/transparent"
+                                app:boxCornerRadiusTopStart="14dp"
+                                app:boxCornerRadiusTopEnd="14dp"
+                                app:boxCornerRadiusBottomStart="14dp"
+                                app:boxCornerRadiusBottomEnd="14dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etPosition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="52dp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Experience (ex: 3 years)"
+                                app:boxBackgroundMode="filled"
+                                app:boxBackgroundColor="#FFFFFF"
+                                app:boxStrokeColor="@android:color/transparent"
+                                app:boxCornerRadiusTopStart="14dp"
+                                app:boxCornerRadiusTopEnd="14dp"
+                                app:boxCornerRadiusBottomStart="14dp"
+                                app:boxCornerRadiusBottomEnd="14dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etExperienceYears"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="52dp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Location"
+                                app:boxBackgroundMode="filled"
+                                app:boxBackgroundColor="#FFFFFF"
+                                app:boxStrokeColor="@android:color/transparent"
+                                app:boxCornerRadiusTopStart="14dp"
+                                app:boxCornerRadiusTopEnd="14dp"
+                                app:boxCornerRadiusBottomStart="14dp"
+                                app:boxCornerRadiusBottomEnd="14dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etLocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="52dp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Skills -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E9EEF8"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Skills"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnEditSkills"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Edit"
+                                android:textColor="#3F7DFF"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupSkills"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleLine="false"
+                            app:chipSpacingHorizontal="10dp"
+                            app:chipSpacingVertical="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/skillsEditContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Add a skill"
+                                app:boxBackgroundMode="filled"
+                                app:boxBackgroundColor="#FFFFFF"
+                                app:boxStrokeColor="@android:color/transparent"
+                                app:boxCornerRadiusTopStart="14dp"
+                                app:boxCornerRadiusTopEnd="14dp"
+                                app:boxCornerRadiusBottomStart="14dp"
+                                app:boxCornerRadiusBottomEnd="14dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etSkillInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="52dp"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAddSkill"
+                                android:layout_width="52dp"
+                                android:layout_height="52dp"
+                                android:layout_marginStart="10dp"
+                                android:text="+"
+                                android:textAllCaps="false"
+                                app:cornerRadius="14dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Education -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E9EEF8"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Education"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnAddEducation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Add"
+                                android:textColor="#3F7DFF"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/educationContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:animateLayoutChanges="true"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Experience -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E9EEF8"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Experience"
+                                android:textColor="#111111"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/btnEditExperience"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Edit"
+                                android:textColor="#3F7DFF"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvExperienceList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Coming soon..."
+                            android:textColor="#8A94A6"
+                            android:layout_marginTop="10dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/experienceEdit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Each experience on a line"
+                            android:visibility="gone"
+                            app:boxBackgroundMode="filled"
+                            app:boxBackgroundColor="#FFFFFF"
+                            app:boxStrokeColor="@android:color/transparent"
+                            app:boxCornerRadiusTopStart="14dp"
+                            app:boxCornerRadiusTopEnd="14dp"
+                            app:boxCornerRadiusBottomStart="14dp"
+                            app:boxCornerRadiusBottomEnd="14dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etExperience"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minLines="4"
+                                android:gravity="top"
+                                android:inputType="textMultiLine"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ✅ SIGN OUT (DANS LE SCROLL) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Sign Out"
+                    android:textAllCaps="false"
+                    android:textColor="#E53935"
+                    android:backgroundTint="#FFF5F5"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="#FFCDD2"
+                    app:strokeWidth="1dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

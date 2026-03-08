@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "583577361041",
+    "project_id": "authentif-fc087",
+    "storage_bucket": "authentif-fc087.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583577361041:android:9bf7890297ddb139b3fd30",
+        "android_client_info": {
+          "package_name": "com.company.authentif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfdka2bcdim_kT2MRkua9ye580vFpJ5VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583577361041:android:3efa15e68b8fca65b3fd30",
+        "android_client_info": {
+          "package_name": "com.example.authentif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfdka2bcdim_kT2MRkua9ye580vFpJ5VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

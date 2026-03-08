@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Couleur de fond -->
+    <solid android:color="#2ECC71"/>   <!-- vert, choisis la couleur que tu veux -->
+
+    <!-- Coins arrondis (pill) -->
+    <corners android:radius="50dp"/>
+
+    <!-- Un peu de padding interne (optionnel) -->
+    <padding
+        android:left="10dp"
+        android:top="4dp"
+        android:right="10dp"
+        android:bottom="4dp" />
+</shape>

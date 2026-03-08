@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB">
+
+    <!-- Header gradient simple -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#8E2DE2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Company Profile"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <!-- Icône (settings -> save) -->
+            <ImageView
+                android:id="@+id/btnTopAction"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="#FFFFFF"
+                android:padding="1dp"
+                android:src="@drawable/logo"
+                app:tint="#8E2DE2"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCompanyNameHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tech Corp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvCompanyTagHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology Company"
+                    android:textColor="#EDE7F6"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Company Information Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Company Information"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/btnEditInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit"
+                            android:textColor="#2563EB"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- VIEW MODE -->
+                    <LinearLayout
+                        android:id="@+id/infoViewBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView android:text="Industry" android:textColor="#6B7280" android:textSize="12sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvIndustry" android:text="Technology"
+                            android:textColor="#111827" android:textStyle="bold"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                        <TextView android:text="Company Size" android:textColor="#6B7280" android:textSize="12sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvSize" android:text="500-1000 employees"
+                            android:textColor="#111827" android:textStyle="bold"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                        <TextView android:text="Location" android:textColor="#6B7280" android:textSize="12sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvLocation" android:text="New York, USA"
+                            android:textColor="#111827" android:textStyle="bold"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+
+                        <TextView android:text="Website" android:textColor="#6B7280" android:textSize="12sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvWebsite" android:text="www.techcorp.com"
+                            android:textColor="#2563EB"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- EDIT MODE -->
+                    <LinearLayout
+                        android:id="@+id/infoEditBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/etIndustry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Industry"
+                            android:padding="12dp"
+                            android:background="@android:drawable/editbox_background"/>
+
+                        <EditText
+                            android:id="@+id/etSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Company Size"
+                            android:padding="12dp"
+                            android:background="@android:drawable/editbox_background"/>
+
+                        <EditText
+                            android:id="@+id/etLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Location"
+                            android:padding="12dp"
+                            android:background="@android:drawable/editbox_background"/>
+
+                        <EditText
+                            android:id="@+id/etWebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Website"
+                            android:padding="12dp"
+                            android:background="@android:drawable/editbox_background"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- About Company Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="About Company"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/btnEditAbout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit"
+                            android:textColor="#2563EB"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- VIEW -->
+                    <TextView
+                        android:id="@+id/tvAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tech Corp is a leading technology company..."
+                        android:textColor="#374151"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <!-- EDIT -->
+                    <EditText
+                        android:id="@+id/etAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minLines="4"
+                        android:gravity="top"
+                        android:hint="Write about your company..."
+                        android:padding="12dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recruitment Statistics -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recruitment Statistics"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:textSize="14sp"/>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:columnCount="2">
+
+                        <TextView
+                            android:id="@+id/tvStatJobs"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:text="8\nActive Jobs"
+                            android:textStyle="bold"
+                            android:background="#F3E8FF"
+                            android:layout_margin="6dp"/>
+
+                        <TextView
+                            android:id="@+id/tvStatApplicants"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:text="45\nTotal Applicants"
+                            android:textStyle="bold"
+                            android:background="#E0F2FE"
+                            android:layout_margin="6dp"/>
+
+                        <TextView
+                            android:id="@+id/tvStatHired"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:text="12\nHired"
+                            android:textStyle="bold"
+                            android:background="#DCFCE7"
+                            android:layout_margin="6dp"/>
+
+                        <TextView
+                            android:id="@+id/tvStatViews"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:text="1.2k\nProfile Views"
+                            android:textStyle="bold"
+                            android:background="#FFEDD5"
+                            android:layout_margin="6dp"/>
+                    </GridLayout>
+
+                    <TextView
+                        android:id="@+id/btnSignOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Sign Out"
+                        android:textColor="#DC2626"
+                        android:textStyle="bold"
+                        android:background="#FEE2E2"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="18dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="create_bg">#F8B96A</color>
+    <color name="create_text">#3A2C18</color>
+    <color name="create_accent">#D81B60</color>
+    <color name="create_box">#A67C36</color>
+    <color name="primary">#4A74F5</color>
+    <color name="primaryDark">#2F52C6</color>
+    <color name="accent">#F7B500</color>
+    <color name="background">#F3F4F6</color>
+    <color name="textDark">#1F2937</color>
+    <color name="textLight">#6B7280</color>
+    <color name="primary_blue">#0077FF</color>
+
+
+
+</resources>

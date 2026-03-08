@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#EEF2FF"
+    android:backgroundTint="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Senior Developer"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnFav"/>
+
+        <ImageView
+            android:id="@+id/btnFav"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@android:drawable/btn_star_big_off"
+            android:tint="#9CA3AF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tech Corp"
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvJobTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvJobTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- chips row -->
+        <LinearLayout
+            android:id="@+id/rowChips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tvJobTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvCompany"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Full-time"
+                android:textSize="11sp"
+                android:textColor="#1D4ED8"
+                android:background="@drawable/bg_chip_blue"/>
+
+            <TextView
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="New York"
+                android:textSize="11sp"
+                android:textColor="#6B7280"
+                android:background="@drawable/bg_chip_gray"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$120k-$150k"
+            android:textColor="#111827"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tvJobTitle"
+            app:layout_constraintTop_toBottomOf="@id/rowChips"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 days ago"
+            android:textColor="#9CA3AF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvSalary"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
